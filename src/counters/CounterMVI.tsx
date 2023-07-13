@@ -20,8 +20,10 @@ const CounterView: FC<CounterViewProps> = (props) => {
   return (
       <div>
         <p>Count: {count}</p>
-        <button onClick={decrement}>Decrement</button>
-        <button onClick={increment}>Increment</button>
+        <div className="d-flex gap-3">
+          <button className={"btn btn-dark"} onClick={decrement}>Decrement</button>
+          <button className={"btn btn-dark"} onClick={increment}>Increment</button>
+        </div>
       </div>
   );
 };

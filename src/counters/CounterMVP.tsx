@@ -1,4 +1,4 @@
-// Model.tsx
+// ----- Model -----
 import {FC, useState} from "react";
 
 interface UserData {
@@ -7,7 +7,7 @@ interface UserData {
   email: string;
 }
 
-// View.tsx
+// ----- View -----
 interface UserViewProps {
   user: UserData;
   onUpdateName: (name: string) => void;
@@ -29,7 +29,7 @@ const UserView: FC<UserViewProps> = ({ user, onUpdateName }) => {
   );
 };
 
-// Presenter.tsx
+// ----- Presenter -----
 interface UserPresenterProps {
   user: UserData;
   updateUser: (updatedUser: UserData) => void;
@@ -44,7 +44,7 @@ const UserPresenter: FC<UserPresenterProps> = ({ user, updateUser }) => {
   return <UserView user={user} onUpdateName={handleUpdateName} />;
 };
 
-// Usage in parent component
+// ----- Usage in parent component -----
 const App: FC = () => {
   const initialUser: UserData = { id: 1, name: "John Doe", email: "john@example.com" };
   const [user, setUser] = useState(initialUser);

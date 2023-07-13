@@ -5,7 +5,7 @@ export const TheoryMVI = () => {
       <div className="theory">
         <h1>теория по mvi</h1>
         <div className="layer-description">
-          <h5>описание слоев mvi</h5>
+          <h5>описание слоев mvI</h5>
           <ol>
             <li>Model. Модель представляет текущее состояние приложения. Модель предоставляет методы обновления состояния,
               через intent'ы (намерения или action.type из Redux \ Flux архитектура)</li>
@@ -17,6 +17,10 @@ export const TheoryMVI = () => {
               Intent посылает эти намерения юзера в Модель
             </li>
           </ol>
+          <span>
+            mvi это однонаправленный архитектурный паттерн({"Intent -> Model -> View"}), который явно определяет действия юзера через интенты.
+            такой паттерн продвигает идею реактивного программирования
+          </span>
         </div>
         <div className="diff-description">
           <h5>Различия MVI с MV*</h5>
@@ -62,7 +66,6 @@ export const TheoryMVI = () => {
                 MVI отличается наличием Intents, которые выражают действия юзера явным образом, и которые рассоединяют Model и View от прямого взаимодействия.
               </strong>
             </li>
-
 
           </ol>
         </div>

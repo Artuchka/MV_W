@@ -1,20 +1,29 @@
-// Model
 import {useEffect, useState} from "react";
 
+
+
+// ----- Model -----
 interface User {
   id: number;
   name: string;
 }
 
-// ViewModel
+// ----- ViewModel -----
 const UserViewModel = () => {
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
     // Simulating API call to fetch users
     const fetchUsers = async () => {
-      const response = await fetch('https://api.example.com/users');
-      const data = await response.json();
+      // const response = await fetch('https://api.example.com/users');
+      // const data = await response.json();
+      const data = [
+        {id: 1, name: "first user"},
+        {id: 2, name: "second user"},
+        {id: 3, name: "third user"},
+        {id: 4, name: "german spy"},
+        {id: 5, name: "police man"},
+      ]
       setUsers(data);
     };
 
@@ -29,7 +38,7 @@ const UserViewModel = () => {
   return { users, deleteUser };
 };
 
-// View
+// ----- View -----
 const UserList = () => {
   const { users, deleteUser } = UserViewModel();
 
